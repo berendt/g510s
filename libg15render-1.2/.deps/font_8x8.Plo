@@ -1,0 +1,3 @@
+font_8x8.lo: font_8x8.c /usr/include/stdc-predef.h
+
+/usr/include/stdc-predef.h:

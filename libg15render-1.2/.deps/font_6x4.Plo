@@ -1,0 +1,3 @@
+font_6x4.lo: font_6x4.c /usr/include/stdc-predef.h
+
+/usr/include/stdc-predef.h:

@@ -1,0 +1,82 @@
+0.1 Initial release
+1.0
+- Change net scale from absolute to relative, with option to revert to
+  absolute (-nsa --net-scale-absolute).
+SVN:
+- Improve response time when switching screens.
+- Battery status monitoring courtesy of Pieter De Wit
+- Detect if Network interface is incorrect and disable netscreen.  Resolves 100% cpu issue reported by Guy Dierx.
+SVN 504:
+- Bottom row information rotation switched with the L5 key
+- 3 additional CPU graph variants switched with the L4 key (at this moment for multi core processors only)
+- New default CPU Screen (at this moment for multi core processors only)
+- Display unicore graphs only on the CPU screen with the option -u (--unicore)
+SVN 505:
+- Bugfix: Render bottom line on the Memory Screen once
+SVN 509:
+- Temperature sensors depends on the lmsensors sysfs filesystem
+SVN 510:
+- Temperature sensor's autodetect
+- Force user sensor id with the option -s id (The id should point to sysfs path /sys/class/hwmon/hwmon[id]/device/temp1_input)
+SVN 511:
+- Improve sensor's autodetect
+- Clean up
+SVN 512:
+- CPU Screens variants for uni core processors
+- CPU frequency info (if available)
+- Battery Screen is enabled if available
+- Clean up
+SVN 513:
+- Improve bottom line and keywatch logic
+SVN 514:
+- Many fixes, clean up
+- Changed version to 1.90
+- CPU Frequency use proper sysfs variable
+- New Summary Screen indicators
+- Network current traffic info in the bottom line
+- Refactor CPU variants into separates additional screens: Summary, CPU and CPU Freq.
+- New Fan Speed Screen
+- After change screen cycle the info bar content is set to the screen default one.
+- Net Screen scaling is now controlled with the L4 key
+- Force start temperature sensor id with the option -t id (The id should point to sysfs path /sys/class/hwmon/hwmon[id]/...)
+- Force start fan speed sensor id with the option -f id (The id should point to sysfs path /sys/class/hwmon/hwmon[id]/...)
+- Force to show temperature [id] in place of the maximal one on the Summary Screen with the option ie -gt 1
+                    (the id should point to sysfs path /sys/class/hwmon/hwmon../device/temp[id]_input)
+- On the Fan / Temp Screen  Current sensor is controlled with the L4 key (on systems with more then one sensor only).
+- Every Screen has his own mode now (except Swap, Memory and Battery Screen)
+SVN 515 (1.90):
+- Fixed temperature / fan sensor lost
+- Fixed screen cycle
+SVN 516:
+- Refactored temperature and fan speed - share the logic
+SVN 517:
+- Improve Bat Screen deactivation logic (now is it similar to SVN 515: Fixed temperature / fan sensor lost)
+SVN 518 (1.91):
+- Fix Summary, Freq and CPU Screens for some variants of the cpu cores number
+- Improve Summary Screen
+SVN 519
+- Change default mode for Freq and Summary Screen
+- Improve Summary Screen for cpus with more then 7 cores
+SVN 520 (1.9.2)
+- Disable monitoring CPUs frequencies with the option -df
+- Improve Summary Screen without CPUs frequencies
+SVN 530 (1.9.3)
+- Activate the bottom info bar content rotate with the option -ir
+- Change bottom info bar content to the component default one
+- Activate variable CPUs count with the option -vc
+- Improve Fan bottom info
+SVN 531 (1.9.4)
+- Fix time info
+- Improve Fan / Temperature Screens leading labels position
+- Improve Fan / Temperature Screens height calculation
+- Improve Summary Screen multi bar (temperature and network)
+SVN 532 (1.9.5)
+- Improve Summary Screen multi bar (temperature and network)
+- Fix compilation with the newer version of the glibc
+- Improve refresh interval causing -nan error with the newer kernel on very fast machines due to too often glibtop probing
+- Fix possible -nan error on the fast screens switch
+- Change refresh interval with the option -r seconds (The seconds must be between 1 and 300)
+SVN 534 (1.9.6)
+- Improve Summary Screen with 3 and 6 core CPU
+SVN 538 (1.9.7)
+- Improve Summary Screen Fan / Temperature sensors bar calculation
