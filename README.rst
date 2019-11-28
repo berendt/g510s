@@ -19,5 +19,15 @@ References
 
 * https://wiki.archlinux.org/index.php/Logitech_Gaming_Keyboards#G510_on_g15daemon
 
-Usage
+Install
 -----
+Dependencies: `libusb-dev` `libgtop2-dev`
+
+For each directory do a `./configure`, `make` and `sudo make install`. Order:
+* libg15
+* libg15render
+* g15daemon
+* the rest
+
+Start with `sudo LD_LIBRARY_PATH=/lib:/usr/lib:/usr/local/lib g15daemon`. Alternatively you can allow non-root to the USB based on the keyboard's ID.
+`g15stats &` can run without sudo afterwards.
